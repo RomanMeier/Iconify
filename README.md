@@ -18,7 +18,7 @@ Example:
 
 ## Configuration
 
-By default this script generates a set of square images with side lengths of 12, 16, 20, 24, 43, 48, 64, 72, 128, 256 and 512 pixels.
+By default this script generates a set of square images with side lengths of 12, 16, 20, 24, 32, 48, 64, 72, 128, 256 and 512 pixels.
 If you need a specific dimension, feel free to edit the script by adding or removing lines as needed.
 
 
