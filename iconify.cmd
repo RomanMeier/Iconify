@@ -14,7 +14,7 @@ if [%~2] == [] (
     set "output=%~2"
 )
 
-rem Create an empty image width x height and composite a scaled version of the input image whilst preserving the original aspect ratio.
+rem Create an empty image and composite a scaled version of the input image onto it whilst preserving the content's original aspect ratio.
 
 magick ^
     ^( ^( -size  12x12  canvas:none ^( -background none -size  12x12  "%input%" -gravity center ^) -composite ^) +append ^) ^
@@ -29,3 +29,7 @@ magick ^
     ^( ^( -size 256x256 canvas:none ^( -background none -size 256x256 "%input%" -gravity center ^) -composite ^) +append ^) ^
     ^( ^( -size 512x512 canvas:none ^( -background none -size 512x512 "%input%" -gravity center ^) -composite ^) +append ^) ^
     "%output%"
+
+if %ERRORLEVEL% NEQ 0 (
+    pause
+)
